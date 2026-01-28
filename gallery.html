@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Nasha Mukti Kendra | Freedom From Addiction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+
+    <!-- ===== Navbar ===== -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+
+            <!-- Logo (Left) -->
+            <a class="navbar-brand" href="#">
+                <img src="logo bg.png" alt="Nasha Mukti Kendra Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+
+                <!-- Center Links -->
+                <ul class="navbar-nav mx-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="programs.html">Programs</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="alcohol-addiction.html">Alcohol Addiction</a></li>
+                            <li><a class="dropdown-item" href="drug-addiction.html">Drug Addiction</a></li>
+                            <li><a class="dropdown-item" href="smoking-addiction.html">Smoking Addiction</a></li>
+                            <li><a class="dropdown-item" href="behavioral-addiction.html">Behavioral Addiction</a></li>
+                            <li><a class="dropdown-item" href="mental-health.html">Mental Health Counseling</a></li>
+                            <li><a class="dropdown-item" href="family-therapy.html">Family Therapy</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="medication.html">Medication</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Call Button (Right) -->
+                <div class="d-flex align-items-center">
+                    <a class="btn btn-call" href="tel:+919999999999">
+                        <i class="bi bi-telephone-fill me-1"></i> Call Now
+                    </a>
+                </div>    
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="program-banner"></section>
+
+  <!-- ===== GALLERY GRID ===== -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="section-title text-center mb-5">
+        <h2>Explore Our Environment</h2>
+        <p>See how we create a peaceful, safe, and healing atmosphere for recovery.</p>
+      </div>
+
+      <div class="row g-4 gallery-grid">
+
+        <!-- Gallery Item 1 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="Alcohol De-addiction Unit.jpg" alt="Alcohol De-addiction Unit">
+            <div class="gallery-overlay">
+              <span class="gallery-text">Alcohol De-addiction Unit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="Detox Room.jpg" alt="Detox Room">
+            <div class="gallery-overlay">
+              <span class="gallery-text">Detox Room</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="Therapy Session.jpg" alt="Therapy Session">
+            <div class="gallery-overlay">
+              <span class="gallery-text">Therapy Session</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="Yoga & Meditation Area.jpg" alt="Yoga Area">
+            <div class="gallery-overlay">
+              <span class="gallery-text">Yoga & Meditation Area</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 5 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="Counseling Room.jpg" alt="Counseling Room">
+            <div class="gallery-overlay">
+              <span class="gallery-text">Counseling Room</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 6 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="Outdoor Activities.jpg" alt="Outdoor Activities">
+            <div class="gallery-overlay">
+              <span class="gallery-text">Outdoor Activities</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 7 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="Dining Area.jpg" alt="Dining Area">
+            <div class="gallery-overlay">
+              <span class="gallery-text">Dining Area</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 8 -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="Patient Rooms.jpg" alt="Patient Rooms">
+            <div class="gallery-overlay">
+              <span class="gallery-text">Patient Rooms</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more if needed -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="Group Therapy.jpg" alt="Group Therapy">
+            <div class="gallery-overlay">
+              <span class="gallery-text">Group Therapy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="Recreation Area.jpg" alt="Recreation Area">
+            <div class="gallery-overlay">
+              <span class="gallery-text">Recreation Area</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="Medical Ward.jpg" alt="Medical Ward">
+            <div class="gallery-overlay">
+              <span class="gallery-text">Medical Ward</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="gallery-card" onclick="openLightbox(this)">
+            <img src="Relaxation Area.jpg" alt="Relaxation Area">
+            <div class="gallery-overlay">
+              <span class="gallery-text">Relaxation Area</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIGHTBOX VIEW ===== -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Gallery Preview">
+  </div>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Nasha Mukti Kendra</h5>
+                    <p>
+                        We are dedicated to helping individuals break free from addiction and rebuild their lives
+                        with dignity, care, and long-term support.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html"> Gallery</a></li>
+                        <li><a href="medication.html">Medication</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs -->
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5>Our Programs</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="alcohol-addiction.html">Alcohol De-addiction Program</a></li>
+                        <li><a href="drug-addiction.html">Drug Rehabilitation Program</a></li>
+                        <li><a href="smoking-addiction.html">Smoking & Tobacco Cessation</a></li>
+                        <li><a href="mental-health.html">Mental Health Counseling</a></li>
+                        <li><a href="family-therapy.html">Family Therapy & Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-4">
+                    <h5>Contact Us</h5>
+                    <p class="footer-contact">
+                        <i class="bi bi-geo-alt-fill me-2"></i> Sukhpura Chowk, opposite Mirajé Hotel<br>
+                        <i class="bi bi-telephone-fill me-2"></i> +91 74048 60086<br>
+                        <i class="bi bi-telephone-fill me-2"></i> +91 85728 57216<br>
+                        <i class="bi bi-envelope-fill me-2"></i> info@nashamuktikendra.com
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="footer-bottom mt-4">
+                <p>
+                    &copy; Nasha Mukti Kendra. All Rights Reserved. <br>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<script>
+    const navLinks = document.querySelectorAll(".nav-link");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === currentPage || linkPage === "") {
+            link.classList.add("active");
+        }
+    });
+</script>
+
+<script>
+    function openLightbox(card) {
+      const imgSrc = card.querySelector("img").src;
+      document.getElementById("lightbox-img").src = imgSrc;
+      document.getElementById("lightbox").classList.add("active");
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.remove("active");
+    }
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const link = document.querySelector(".nav-item.dropdown > .nav-link");
+        let tappedOnce = false;
+
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth < 992) {
+                if (!tappedOnce) {
+                    e.preventDefault(); // first tap pe page open na ho
+                    this.nextElementSibling.classList.add("show");
+                    tappedOnce = true;
+                } else {
+                    // second tap pe normal page open hoga
+                    tappedOnce = false;
+                }
+            }
+        });
+
+        // agar user kahin aur tap kare to reset ho jaye
+        document.addEventListener("click", function (e) {
+            if (!link.contains(e.target)) {
+                tappedOnce = false;
+            }
+        });
+    });
+</script>
+
+</html>
