@@ -1,0 +1,240 @@
+/* ===== Base Styling ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fafc;
+    color: #222;
+}
+
+.section-title h2 {
+    font-weight: 700;
+    color: #0f3d3e;
+}
+
+.section-title p {
+    color: #6c757d;
+    max-width: 760px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.program-banner {
+    width: 100%;
+    height: 460px;
+    margin-top: 80px;
+    margin-bottom: -50px;
+    background: url('programs\ banner\ new.jpg') center/cover no-repeat;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .program-banner {
+    height: 360px;
+    margin-top: 80px;
+    margin-bottom: -30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .program-banner {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin-top: 40px;
+    margin-bottom: -50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+/* ===== Programs Overview ===== */
+.programs-overview {
+    padding: 90px 0;
+}
+
+.program-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 38px 28px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-circle {
+    width: 75px;
+    height: 75px;
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+}
+
+.icon-circle i {
+    color: #fff;
+    font-size: 30px;
+}
+
+.program-card h5 {
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.program-card p {
+    font-size: 14.9px;
+    color: #6c757d;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.program-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 22px 48px rgba(26, 188, 156, 0.35);
+}
+
+/* ===== Detailed Programs Section ===== */
+.program-details {
+    background: #f1f5f9;
+    padding: 90px 0;
+}
+
+.detail-box {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px 26px;
+    height: 100%;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.detail-box h5 {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #0f3d3e;
+}
+
+.detail-box p {
+    font-size: 14.9px;
+    color: #6c757d;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.detail-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(26, 188, 156, 0.25);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .program-hero h1 {
+        font-size: 36px;
+    }
+
+    .program-hero p {
+        font-size: 16px;
+    }
+}
+
+/* ===== Recovery Comparison Section ===== */
+.recovery-comparison {
+    background: #ffffff;
+    padding: 90px 0;
+}
+
+.comparison-wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+}
+
+.comparison-side {
+    flex: 1;
+    text-align: center;
+}
+
+.comparison-side h4 {
+    font-weight: 700;
+    color: #0f3d3e;
+    margin-bottom: -10px;
+}
+
+.comparison-card {
+    background: #f8fafc;
+    border-radius: 20px;
+    padding: 25px 22px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.comparison-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 18px;
+}
+
+.comparison-card p {
+    font-size: 15px;
+    color: #6c757d;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* Center Divider Line */
+.comparison-divider {
+    width: 2px;
+    background: linear-gradient(180deg, #1abc9c, #16a085);
+    position: relative;
+    margin: 0 10px;
+}
+
+.comparison-divider span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    color: #16a085;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(26, 188, 156, 0.25);
+    white-space: nowrap;
+}
+
+/* Hover Effects */
+.comparison-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(26, 188, 156, 0.25);
+    transition: all 0.4s ease;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .comparison-wrapper {
+        flex-direction: column;
+    }
+
+    .comparison-divider {
+        width: 100%;
+        height: 2px;
+        margin: 30px 0;
+    }
+
+    .comparison-divider span {
+        top: 50%;
+        left: 50%;
+    }
+}

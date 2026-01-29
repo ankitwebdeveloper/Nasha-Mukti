@@ -1,0 +1,330 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f9fafb;
+    color: #333;
+}
+
+.program-banner {
+    width: 100%;
+    height: 460px;
+    margin-top: 80px;
+    margin-bottom: -50px;
+    background: url('about\ banner\ 1.jpg') center/cover no-repeat;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .program-banner {
+    height: 360px;
+    margin-top: 80px;
+    margin-bottom: -30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .program-banner {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin-top: 40px;
+    margin-bottom: -50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+/* ===== Entry Animations ===== */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.fade-up.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.fade-up.delay-2 {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating */
+@keyframes floatContent {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* ===== SECTION TITLES ===== */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-weight: 700;
+    color: #0f4c75;
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+}
+
+.section-title p {
+    color: #666;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* ===== FACILITY SECTION ===== */
+.facility-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.facility-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 32px 25px;
+    height: 100%;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.facility-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(26, 188, 156, 0.25);
+}
+
+.facility-card i {
+    font-size: 36px;
+    color: #1abc9c;
+    margin-bottom: 15px;
+    transition: 0.4s;
+}
+
+.facility-card h6 {
+    font-weight: 600;
+    color: #0f4c75;
+    margin-bottom: 10px;
+}
+
+.facility-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* ===== ROUTINE SECTION ===== */
+.routine-section {
+    padding: 80px 0;
+    background: #f3f7f9;
+}
+
+.routine-card {
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 22px;
+    padding: 30px 22px;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.35s ease;
+    text-align: center;
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+.routine-card:hover {
+    box-shadow: 0 20px 50px rgba(26, 188, 156, 0.3);
+}
+
+.routine-card i {
+    font-size: 34px;
+    color: #1abc9c;
+    margin-bottom: 14px;
+}
+
+.routine-card h6 {
+    font-weight: 600;
+    color: #0f4c75;
+    margin-bottom: 8px;
+}
+
+.routine-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ===== MISSION SECTION ===== */
+.mission-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.mission-card {
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 22px;
+    padding: 32px 25px;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    text-align: center;
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+.mission-card:hover {
+    box-shadow: 0 25px 60px rgba(26, 188, 156, 0.3);
+}
+
+.mission-card i {
+    font-size: 38px;
+    color: #1abc9c;
+    margin-bottom: 14px;
+}
+
+.mission-card h5 {
+    font-weight: 600;
+    color: #0f4c75;
+    margin-bottom: 10px;
+}
+
+.mission-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ===== WHY TRUST US ===== */
+.why-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f0fdf9, #e8f8f5);
+}
+
+.why-card {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 22px;
+    padding: 30px;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+.why-card:hover {
+    box-shadow: 0 25px 60px rgba(26, 188, 156, 0.35);
+}
+
+.why-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 22px;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.why-card:hover::before {
+    opacity: 1;
+}
+
+.why-card i {
+    font-size: 34px;
+    margin-bottom: 15px;
+    color: #1abc9c;
+    transition: 0.4s ease;
+    transform: translateZ(20px);
+}
+
+.why-card:hover i {
+    transform: translateZ(30px) scale(1.15) rotate(6deg);
+}
+
+.why-card h6 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #0f4c75;
+    transform: translateZ(15px);
+}
+
+.why-card p {
+    opacity: 0.9;
+    transform: translateZ(10px);
+    color: #555;
+}
+
+/* ===== FLOATING CARD ANIMATION ===== */
+@keyframes floatCard {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+    padding: 80px 0;
+    background: #ffffff;
+    color: #0f4c75;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    color: #555;
+}
+
+.cta-section .btn {
+    border-radius: 30px;
+    padding: 12px 32px;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn-primary {
+    background: linear-gradient(135deg, #0f4c75, #1abc9c);
+    border: none;
+    color: #fff;
+}
+
+.cta-section .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(26, 188, 156, 0.3);
+}
+
+.cta-section .btn-outline-primary {
+    border: 2px solid #1abc9c;
+    color: #1abc9c;
+}
+
+.cta-section .btn-outline-primary:hover {
+    background: #1abc9c;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(26, 188, 156, 0.3);
+}
