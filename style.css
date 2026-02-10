@@ -661,6 +661,23 @@ h1, h2, h3, h4, h5, h6,
   box-shadow: 0 10px 25px rgba(26, 188, 156, 0.4);
 }
 
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 576px) {
+  .cta-buttons .btn {
+    width: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+
 /* ===== TEAM SECTION ===== */
 .team-section {
   padding: 80px 0;

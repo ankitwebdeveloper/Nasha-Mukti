@@ -59,6 +59,16 @@ body {
     line-height: 1.8;
 }
 
+@media (max-width: 768px) {
+  .section-title h2 {
+    max-width: 380px;
+    margin: 20px auto 0;
+    line-height: 1.3;
+    text-align: center;
+  }
+}
+
+
 /* ===== Symptoms Section ===== */
 .program-symptoms {
     background-color: #f1f5f9;
