@@ -302,6 +302,16 @@ h1, h2, h3, h4, h5, h6,
   text-align: center;
   line-height: 1.4;
 }
+.program-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #1abc9c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 
 /* ===== Why Choose Us ===== */
 .why-section {

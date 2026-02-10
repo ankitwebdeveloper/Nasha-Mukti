@@ -19,6 +19,18 @@ body {
     display: block;
 }
 
+.custom-image {
+    width: 100%;
+    max-width: 390px;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
 /* ===== Section Titles ===== */
 .section-title h2 {
     font-weight: 700;
