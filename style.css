@@ -109,6 +109,23 @@ h1, h2, h3, h4, h5, h6,
   transform: translateY(-2px);
 }
 
+.hero-btns {
+  display: flex;
+  flex-wrap: nowrap;   /* ek line me hi rahenge */
+  gap: 12px;
+}
+
+.hero-btns .btn {
+  margin-right: 0;    /* extra gap remove */
+  white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .hero-btns {
+    justify-content: center;
+  }
+}
+
 /* ===== Entry Animations ===== */
 .fade-up {
   opacity: 0;
@@ -169,6 +186,19 @@ h1, h2, h3, h4, h5, h6,
   background: #fff;
   overflow: hidden;
 }
+
+.about-content h3 {
+  white-space: nowrap;   /* ek line me hi rahe */
+  overflow: hidden;
+  text-overflow: ellipsis; /* agar space kam ho to ... aa jaye */
+}
+
+@media (max-width: 576px) {
+  .about-content h3 {
+    font-size: 1.2rem;  /* mobile pe thoda chota */
+  }
+}
+
 
 .about-img img {
   border-radius: 20px;
@@ -318,6 +348,35 @@ h1, h2, h3, h4, h5, h6,
   padding: 80px 0;
   background: linear-gradient(135deg, #f0fdf9, #e8f8f5);
 }
+
+/* Title row with icon */
+.why-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+/* Icon */
+.why-title i {
+  font-size: 28px;
+  color: #1abc9c;
+  flex-shrink: 0;
+  transition: 0.4s ease;
+}
+
+/* Heading */
+.why-title h6 {
+  margin: 0;
+  font-weight: 700;
+  color: #0f4c75;
+}
+
+/* Hover animation */
+.why-card:hover .why-title i {
+  transform: scale(1.15) rotate(6deg);
+}
+
 
 /* Glass Card */
 .why-card {
