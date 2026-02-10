@@ -31,19 +31,28 @@ h1, h2, h3, h4, h5, h6,
   margin-top: 80px;
 }
 
-/* Video Background */
-.hero-video {
+/* Slider Wrapper */
+.hero-slider {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
+  inset: 0;
   z-index: 0;
 }
 
-/* Lighter Overlay */
+/* Slides */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Overlay */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -74,12 +83,18 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* Buttons */
+.hero-btns {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+
 .hero-btns .btn {
   border-radius: 30px;
   padding: 12px 28px;
-  margin-right: 15px;
   font-weight: 600;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 /* Call Button */
@@ -109,37 +124,22 @@ h1, h2, h3, h4, h5, h6,
   transform: translateY(-2px);
 }
 
-.hero-btns {
-  display: flex;
-  flex-wrap: nowrap;   /* ek line me hi rahenge */
-  gap: 12px;
-}
-
-.hero-btns .btn {
-  margin-right: 0;    /* extra gap remove */
-  white-space: nowrap;
-}
-
+/* Mobile Center */
 @media (max-width: 576px) {
   .hero-btns {
     justify-content: center;
   }
 }
 
-/* ===== Entry Animations ===== */
+/* ===== Animations ===== */
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
   animation: fadeUp 1s ease forwards;
 }
 
-.fade-up.delay-1 {
-  animation-delay: 0.3s;
-}
-
-.fade-up.delay-2 {
-  animation-delay: 0.6s;
-}
+.fade-up.delay-1 { animation-delay: 0.3s; }
+.fade-up.delay-2 { animation-delay: 0.6s; }
 
 @keyframes fadeUp {
   to {
@@ -148,19 +148,54 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-/* ===== Continuous Floating Animation ===== */
 @keyframes floatContent {
   0% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
 
-/* ===== Pulse Glow for CTA ===== */
 @keyframes pulseGlow {
   0% { box-shadow: 0 0 0 rgba(26, 188, 156, 0.4); }
   50% { box-shadow: 0 0 25px rgba(26, 188, 156, 0.7); }
   100% { box-shadow: 0 0 0 rgba(26, 188, 156, 0.4); }
 }
+
+.floating-contact-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 3px 0;
+  margin-bottom: 30px;
+}
+
+.icon-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.call-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366, #1ebe5d);
+}
+
+.icon-btn:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
 
 /* ===== Section Headings ===== */
 .section-title {
@@ -198,7 +233,6 @@ h1, h2, h3, h4, h5, h6,
     font-size: 1.2rem;  /* mobile pe thoda chota */
   }
 }
-
 
 .about-img img {
   border-radius: 20px;

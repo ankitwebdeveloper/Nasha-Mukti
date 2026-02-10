@@ -77,41 +77,47 @@
         </div>
     </nav>
 
-    <!-- ===== Hero Section ===== -->
     <section class="hero">
-        <!-- Background Video -->
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="hero.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+  <!-- Background Slider -->
+  <div class="hero-slider">
+    <div class="hero-slide active" style="background-image: url('slider\ 1.jpeg');"></div>
+    <div class="hero-slide" style="background-image: url('slider\ 2.jpeg');"></div>
+    <div class="hero-slide" style="background-image: url('sli');"></div>
+  </div>
 
-        <!-- Overlay -->
-        <div class="hero-overlay"></div>
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
 
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="fade-up">Nasha chhodo, khushiyon se phir milo</h1>
-                <p class="fade-up delay-1">
-                    Hum logon aur parivaron ko pyaar, sahi ilaaj aur poori support ke saath nasha chhodne mein madad
-                    karte hain
-                </p>
-                <div class="hero-btns fade-up delay-2">
-                    <a href="tel:+917404860086" class="btn btn-primary-custom">
-                        <i class="bi bi-telephone-fill me-1"></i> Call Now
-                    </a>
-                    <a href="https://wa.me/917404860086" target="_blank" class="btn btn-outline-custom">
-
-                        <i class="bi bi-whatsapp me-1"></i> WhatsApp Us
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="fade-up">Nasha chhodo, khushiyon se phir milo</h1>
+      <p class="fade-up delay-1">
+        Hum logon aur parivaron ko pyaar, sahi ilaaj aur poori support ke saath nasha chhodne mein madad
+        karte hain
+      </p>
+      <div class="hero-btns fade-up delay-2">
+        <a href="tel:+917404860086" class="btn btn-primary-custom">
+          <i class="bi bi-telephone-fill me-1"></i> Call Now
+        </a>
+        <a href="https://wa.me/917404860086" target="_blank" class="btn btn-outline-custom">
+          <i class="bi bi-whatsapp me-1"></i> WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- ===== About Section ===== -->
     <section class="about-section">
         <div class="container">
+            <div class="floating-contact-buttons fade-up delay-2">
+  <a href="tel:+917404860086" class="icon-btn call-btn">
+    <i class="bi bi-telephone-fill"></i>
+  </a>
+  <a href="https://wa.me/917404860086" target="_blank" class="icon-btn whatsapp-btn">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+</div>
             <div class="section-title">
                 <h2>About Our Nasha Mukti Kendra</h2>
                 <p>Dedicated to recovery, healing, and a healthier life for every individual.</p>
@@ -717,6 +723,16 @@
     });
 </script>
 
+<script>
+  const slides = document.querySelectorAll('.hero-slide');
+  let currentSlide = 0;
+
+  setInterval(() => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }, 4000); // change every 4 seconds
+</script>
 
 
 </html>
