@@ -131,6 +131,103 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
+/* ===== HERO RESPONSIVE FIX ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 80px;
+  padding: 0 20px;
+}
+
+/* Slider Wrapper */
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Slides */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+/* Mobile height fix */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-slide {
+    background-position: center top;
+  }
+}
+
+/* Overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 76, 117, 0.55);
+  z-index: 1;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 650px;
+  animation: floatContent 6s ease-in-out infinite;
+}
+
+/* Headings Responsive */
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+}
+
+/* Buttons */
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 576px) {
+  .hero-btns {
+    justify-content: center;
+  }
+}
+
+
 /* ===== Animations ===== */
 .fade-up {
   opacity: 0;
@@ -184,7 +281,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .call-btn {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: #17a589;
 }
 
 .whatsapp-btn {
