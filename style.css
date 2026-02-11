@@ -1,3 +1,7 @@
+/* =========================================================
+   GLOBAL FONTS & BODY
+========================================================= */
+
 * {
   font-family: 'Inter', sans-serif;
 }
@@ -8,7 +12,12 @@ body {
 }
 
 /* Headings Font */
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .section-title h2,
 .hero h1,
 .about-content h3,
@@ -21,10 +30,14 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: 0.4px;
 }
 
-/* ===== HERO SECTION ===== */
+
+/* =========================================================
+   HERO SECTION (DESKTOP + MOBILE DIFFERENT IMAGES)
+========================================================= */
+
 .hero {
   position: relative;
-  height: calc(150vh - 80px); /* Navbar height adjust */
+  min-height: calc(150vh - 80px);
   width: 100%;
   display: flex;
   align-items: center;
@@ -42,15 +55,15 @@ h1, h2, h3, h4, h5, h6,
   z-index: 0;
 }
 
-/* Slides */
+/* Slides Common */
 .hero-slide {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  background-size: cover; /* Full screen, no distortion */
-  background-position: center center;
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; /* Desktop default */
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -59,11 +72,31 @@ h1, h2, h3, h4, h5, h6,
   opacity: 1;
 }
 
+/* ===== DESKTOP IMAGES ===== */
+.slide-1 { background-image: url('slider\ 1.jpeg'); }
+.slide-2 { background-image: url('slider\ 2.jpeg'); }
+.slide-3 { background-image: url('slider\ 3.jpeg'); }
+
+/* ===== MOBILE IMAGES ===== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 95vh;
+  }
+
+  .hero-slide {
+    background-size: cover; /* Mobile full fill */
+  }
+
+  .slide-1 { background-image: url('slider\ res.jpeg'); }
+  .slide-2 { background-image: url('slider\ 2\ res.jpeg'); }
+  .slide-3 { background-image: url('slider\ 3\ res.jpeg'); }
+}
+
 /* Overlay */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(15, 76, 117, 0.55);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
@@ -89,15 +122,13 @@ h1, h2, h3, h4, h5, h6,
   margin: 20px 0 30px;
 }
 
-/* Buttons – SAME LINE */
+/* Buttons */
 .hero-btns {
   display: flex;
-  flex-wrap: nowrap;
   gap: 15px;
   justify-content: flex-start;
 }
 
-/* Mobile center but same line */
 @media (max-width: 576px) {
   .hero-content {
     text-align: center;
@@ -107,7 +138,7 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-/* Buttons */
+/* Buttons Style */
 .hero-btns .btn {
   border-radius: 30px;
   padding: 12px 28px;
@@ -143,23 +174,7 @@ h1, h2, h3, h4, h5, h6,
   transform: translateY(-2px);
 }
 
-/* ===== Animations ===== */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 1s ease forwards;
-}
-
-.fade-up.delay-1 { animation-delay: 0.3s; }
-.fade-up.delay-2 { animation-delay: 0.6s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Animations */
 @keyframes floatContent {
   0% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -173,91 +188,10 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
-/* ===== Animations ===== */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 1s ease forwards;
-}
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
 
-.fade-up.delay-1 { animation-delay: 0.3s; }
-.fade-up.delay-2 { animation-delay: 0.6s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes floatContent {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes pulseGlow {
-  0% { box-shadow: 0 0 0 rgba(26, 188, 156, 0.4); }
-  50% { box-shadow: 0 0 25px rgba(26, 188, 156, 0.7); }
-  100% { box-shadow: 0 0 0 rgba(26, 188, 156, 0.4); }
-}
-
-.floating-contact-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin: 3px 0;
-  margin-bottom: 30px;
-}
-
-.icon-btn {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.call-btn {
-  background: #17a589;
-}
-
-.whatsapp-btn {
-  background: linear-gradient(135deg, #25D366, #1ebe5d);
-}
-
-.icon-btn:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}
-
-
-/* ===== Section Headings ===== */
-.section-title {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.section-title h2 {
-  font-weight: 800;
-  color: #0f4c75;
-  font-size: 2.5rem;
-}
-
-.section-title p {
-  color: #666;
-  max-width: 700px;
-  margin: 10px auto 0;
-}
-
-/* ===== About Section ===== */
 .about-section {
   padding: 80px 0;
   background: #fff;
@@ -265,14 +199,14 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .about-content h3 {
-  white-space: nowrap;   /* ek line me hi rahe */
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* agar space kam ho to ... aa jaye */
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 576px) {
   .about-content h3 {
-    font-size: 1.2rem;  /* mobile pe thoda chota */
+    font-size: 1.2rem;
   }
 }
 
@@ -305,13 +239,17 @@ h1, h2, h3, h4, h5, h6,
   margin-right: 8px;
 }
 
-/* ===== Programs Section ===== */
+
+/* =========================================================
+   PROGRAMS SECTION
+========================================================= */
+
 .programs-section {
   padding: 80px 0;
   background: #f3f7f9;
 }
 
-/* Fixed card size for all cards */
+/* Fixed card size */
 .program-card {
   perspective: 1200px;
   margin: auto;
@@ -343,7 +281,7 @@ h1, h2, h3, h4, h5, h6,
   justify-content: center;
   align-items: center;
   padding: 30px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .program-card-front {
@@ -355,13 +293,13 @@ h1, h2, h3, h4, h5, h6,
   background-position: center;
   color: #fff;
   transform: rotateY(180deg);
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   position: relative;
 }
 
 /* Back overlay */
 .back-overlay {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -408,6 +346,7 @@ h1, h2, h3, h4, h5, h6,
   text-align: center;
   line-height: 1.4;
 }
+
 .program-img {
   width: 140px;
   height: 140px;
@@ -419,7 +358,10 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
-/* ===== Why Choose Us ===== */
+/* =========================================================
+   WHY CHOOSE US SECTION
+========================================================= */
+
 .why-section {
   padding: 80px 0;
   background: linear-gradient(135deg, #f0fdf9, #e8f8f5);
@@ -433,7 +375,6 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 10px;
 }
 
-/* Icon */
 .why-title i {
   font-size: 28px;
   color: #1abc9c;
@@ -441,7 +382,6 @@ h1, h2, h3, h4, h5, h6,
   transition: 0.4s ease;
 }
 
-/* Heading */
 .why-title h6 {
   margin: 0;
   font-weight: 700;
@@ -452,7 +392,6 @@ h1, h2, h3, h4, h5, h6,
 .why-card:hover .why-title i {
   transform: scale(1.15) rotate(6deg);
 }
-
 
 /* Glass Card */
 .why-card {
@@ -473,9 +412,17 @@ h1, h2, h3, h4, h5, h6,
 
 /* Floating */
 @keyframes floatCard {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* Hover */
@@ -489,7 +436,7 @@ h1, h2, h3, h4, h5, h6,
   position: absolute;
   inset: 0;
   border-radius: 22px;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
   opacity: 0;
   transition: 0.4s;
 }
@@ -526,7 +473,11 @@ h1, h2, h3, h4, h5, h6,
   transform: translateZ(10px);
 }
 
-/* ===== Process Section ===== */
+
+/* =========================================================
+   PROCESS SECTION
+========================================================= */
+
 .process-section {
   padding: 90px 0;
   background: linear-gradient(135deg, #ecfdfb, #e8f8f5);
@@ -561,7 +512,7 @@ h1, h2, h3, h4, h5, h6,
   position: absolute;
   inset: 0;
   border-radius: 22px;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.45), transparent);
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.45), transparent);
   opacity: 0;
   transition: 0.5s;
 }
@@ -610,7 +561,11 @@ h1, h2, h3, h4, h5, h6,
   transform: translateZ(15px);
 }
 
-/* ===== Testimonials ===== */
+
+/* =========================================================
+   TESTIMONIALS SECTION
+========================================================= */
+
 .testimonial-section {
   padding: 90px 0;
   background: linear-gradient(135deg, #f0fdf9, #e8f8f5);
@@ -677,7 +632,11 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: 1px;
 }
 
-/* ===== CTA Section (White Background Version) ===== */
+
+/* =========================================================
+   CTA SECTION
+========================================================= */
+
 .medication-cta {
   background: #ffffff;
   padding: 80px 0;
@@ -704,7 +663,7 @@ h1, h2, h3, h4, h5, h6,
   color: #6c757d;
 }
 
-/* ===== Buttons (CTA matched) ===== */
+/* CTA Buttons */
 .btn-primary-custom {
   background: linear-gradient(135deg, #1abc9c, #16a085);
   color: #fff;
@@ -754,7 +713,10 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
-/* ===== TEAM SECTION ===== */
+/* =========================================================
+   TEAM SECTION
+========================================================= */
+
 .team-section {
   padding: 80px 0;
   background: #ffffff;
@@ -795,12 +757,12 @@ h1, h2, h3, h4, h5, h6,
   transform: scale(1.1);
 }
 
-/* Optional overlay effect */
+/* Overlay effect */
 .team-img::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.25));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.25));
   opacity: 0;
   transition: 0.4s;
 }
@@ -834,7 +796,11 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.6;
 }
 
-/* ===== PHOTO GALLERY SECTION ===== */
+
+/* =========================================================
+   PHOTO GALLERY SECTION
+========================================================= */
+
 .gallery-section {
   padding: 80px 0;
   background: #ffffff;
@@ -890,4 +856,58 @@ h1, h2, h3, h4, h5, h6,
 
 .gallery-card:hover .gallery-text {
   transform: translateY(0);
+}
+
+
+/* =========================================================
+   GLOBAL ANIMATIONS
+========================================================= */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.fade-up.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.fade-up.delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatContent {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(26, 188, 156, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgba(26, 188, 156, 0.7);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(26, 188, 156, 0.4);
+  }
 }
