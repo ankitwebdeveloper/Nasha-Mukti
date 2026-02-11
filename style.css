@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6,
 /* ===== HERO SECTION ===== */
 .hero {
   position: relative;
-  height: calc(100vh - 80px); /* Navbar height adjust */
+  height: calc(150vh - 80px); /* Navbar height adjust */
   width: 100%;
   display: flex;
   align-items: center;
